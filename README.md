@@ -1,34 +1,27 @@
-# ELEC2645 Group Games Console
+# ELEC2645 STM32 Games Console
 
-Group project for ELEC2645 Embedded Systems — STM32 Nucleo-L476RG.
+A group embedded systems project developed for the ELEC2645 module using the **STM32 Nucleo-L476RG** microcontroller.
 
-## Games
+The project is a small games console featuring multiple games, joystick-based controls, button input, LCD display output, and modular game logic written in C.
 
-| Slot | Game | Status |
-|------|------|--------|
-| Game 1 | Two-Player Chess | ✅ Done |
-| Game 2 | Rock-It Ralph | ✅ Done |
-| Game 3 | Tron Light Cycles | ✅ Done |
+## Project Overview
 
-## Structure
+This repository contains three playable games developed for an STM32-based embedded games console. Each game is implemented in its own folder, with shared menu and input functionality used across the project.
 
-```
-game_1/   — Chess (Ali)
-game_2/   — Rock-It Ralph (Ahmad)
-game_3/   — Tron (Ali)
-shared/   — Menu system and input handler
-Core/     — STM32 HAL files
-```
+## Games Included
 
-## Controls
+| Game | Title | Status |
+|---|---|---|
+| Game 1 | Two-Player Chess | Complete |
+| Game 2 | Rock-It Ralph | Complete |
+| Game 3 | Tron Light Cycles | Complete |
 
-- Joystick: move / navigate
-- BT2: action / select
-- BT3: back to menu
+## Repository Structure
 
-## Notes
-
-- Each game lives in its own folder and implements `GameX_Run()`
-- Don't edit `shared/` without checking with the group first
-- Screen: 240×320, 4-bit colour palette
-- No malloc — use static variables for game state
+```text
+game_1/   Two-Player Chess
+game_2/   Rock-It Ralph
+game_3/   Tron Light Cycles
+shared/   Shared menu system and input handling
+Core/     STM32 HAL and generated project files
+Drivers/  STM32 HAL drivers and CMSIS files
