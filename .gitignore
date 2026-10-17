@@ -7,3 +7,15 @@ mx.scratch
 .vscode/
 .clangd
 .metadata/
+# secrets
+.env
+.env.*
+!.env.example
+
+# build artefacts
+cmake-build*/
+*.elf
+*.bin
+*.hex
+*.map
+.DS_Store
